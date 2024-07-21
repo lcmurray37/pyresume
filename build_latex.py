@@ -1,17 +1,40 @@
 import pylatex
 from pylatex import Document, Section, Itemize, Command
 
-# Create a basic document
+# Create a new Document
 doc = Document()
-doc.preamble.append(Command('title', 'My Resume'))
+
+# Document metadata
+doc.preamble.append(Command('title', 'Resume'))
 doc.preamble.append(Command('author', 'Your Name'))
-doc.preamble.append(Command('date', 'Today\'s Date'))
+doc.preamble.append(Command('date', ''))
+
+# Title (Name)
+doc.append(Section(bold('Your Name')))
+doc.append(Section('Contact Information'))
+doc.append('Address: Your Address\n')
+doc.append('Phone: Your Phone Number\n')
+doc.append('Email: Your Email Address\n')
+
+# Summary
 doc.append(Section('Summary'))
-doc.append('This is a summary of your experience.')
+doc.append('A summary of your skills and experience.')
+
+# Experience
 doc.append(Section('Experience'))
-with doc.create(Itemize()) as itemize:
-    itemize.add_item('Job 1: Description of job 1.')
-    itemize.add_item('Job 2: Description of job 2.')
+with doc.create(Section('Job Title')):
+    doc.append('Company Name, Location\n')
+    doc.append('Dates of Employment\n')
+    doc.append('Responsibilities and achievements.\n')
+
+# Education
 doc.append(Section('Education'))
-doc.append('Your educational background.')
+doc.append('Degree Name in Major\n')
+doc.append('University Name, Location\n')
+doc.append('Graduation Date\n')
+
+# Generate PDF
 doc.generate_pdf('resume', clean_tex=False)
+
+# Clean up auxiliary files
+doc.generate_tex(clean_tex=True)
