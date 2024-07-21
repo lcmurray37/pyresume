@@ -39,9 +39,9 @@ with doc.create(Section('Contact Information')):
     doc.append(bold('Phone Number: '))
     doc.append('+1 (123) 456-7890\n')
     doc.append(bold('Email: '))
-    doc.append('lucy.murray@example.com\n')
+    doc.append('lcmurray37@gmail.com\n')
     doc.append(bold('GitHub: '))
-    doc.append('github.com/lucymurray')
+    doc.append('github.com/lcmurray37')
 
 # Sections with custom formatting
 with doc.create(Section('Experience')):
