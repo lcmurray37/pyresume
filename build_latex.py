@@ -2,7 +2,7 @@ import pylatex
 from pylatex import Document, Section, Itemize, Command
 
 # Create a new Document
-doc = Document()
+doc = Document(compiler='pdflatex')
 
 # Document metadata
 doc.preamble.append(Command('title', 'Resume'))
