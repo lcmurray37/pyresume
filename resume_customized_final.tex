@@ -1,0 +1,63 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+%
+\usepackage{xcolor}%
+\definecolor[gray!30]{sectioncolor}%
+
+    \usepackage{titlesec}
+    \titleformat{\section}
+      {\normalfont\Large\bfseries}
+      {\colorbox{sectioncolor}{\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{\textcolor{white}{\thesection}}}}
+      {0em}
+      {\color{sectioncolor}\MakeUppercase}
+    \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+    
+    \titleformat{\subsection}
+      {\normalfont\large\bfseries}
+      {\thesubsection}
+      {1em}
+      {}
+    \titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
+%
+\renewcommand{\thesection}{}%
+\title{Lucy Murray}%
+%
+\begin{document}%
+\normalsize%
+\maketitle%
+\section{Contact Information}%
+\label{sec:ContactInformation}%
+\textbf{Phone Number: }%
++1 (123) 456{-}7890\newline%
+%
+\textbf{Email: }%
+lucy.murray@example.com\newline%
+%
+\textbf{GitHub: }%
+github.com/lucymurray
+
+%
+\section{Experience}%
+\label{sec:Experience}%
+\subsection{2023 {-} Present}%
+\label{subsec:2023{-}Present}%
+\textbf{Software Engineer at XYZ Inc.}
+
+%
+\section{Tools}%
+\label{sec:Tools}%
+Python, LaTeX, Git, VS Code
+
+%
+\section{Education}%
+\label{sec:Education}%
+\subsection{2019 {-} 2023}%
+\label{subsec:2019{-}2023}%
+\textbf{Bachelor of Science in Computer Science}
+
+%
+\end{document}
