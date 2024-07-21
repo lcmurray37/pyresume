@@ -1,40 +1,67 @@
-import pylatex
-from pylatex import Document, Section, Itemize, Command
+from pylatex import Document, Section, Subsection, Command
+from pylatex.utils import bold, NoEscape
 
-# Create a new Document
-doc = Document(compiler='pdflatex')
+def generate_resume():
+    # Create a new Document
+    doc = Document()
 
-# Document metadata
-doc.preamble.append(Command('title', 'Resume'))
-doc.preamble.append(Command('author', 'Lucy Murray'))
-doc.preamble.append(Command('date', ''))
+    # Document metadata
+    doc.preamble.append(Command('title', 'Resume'))
+    doc.preamble.append(Command('author', 'Your Name'))
+    doc.preamble.append(Command('date', ''))
 
-# Title (Name)
-doc.append(Section('Lucy Murray'))
-doc.append(Section('Contact Information'))
-doc.append('Address: Your Address\n')
-doc.append('Phone: Your Phone Number\n')
-doc.append('Email: Your Email Address\n')
+    # Define a custom command for section headers
+    doc.preamble.append(NoEscape(r'''
+        \newcommand{\sectionheader}[1]{
+            \par\bigskip
+            {\Large\bfseries #1}
+            \par\smallskip
+            \hrule
+            \par\medskip
+        }
+    '''))
 
-# Summary
-doc.append(Section('Summary'))
-doc.append('A summary of your skills and experience.')
+    # Title (Name)
+    doc.append(Section(bold('Your Name')))
 
-# Experience
-doc.append(Section('Experience'))
-with doc.create(Section('Job Title')):
-    doc.append('Company Name, Location\n')
-    doc.append('Dates of Employment\n')
-    doc.append('Responsibilities and achievements.\n')
+    # Contact Information
+    doc.append(Section('Contact Information'))
+    doc.append(NoEscape(r'\textbf{Phone:} Your Phone Number'))
+    doc.append(NoEscape(r'\newline'))
+    doc.append(NoEscape(r'\textbf{Email:} Your Email Address'))
+    doc.append(NoEscape(r'\newline'))
+    doc.append(NoEscape(r'\textbf{GitHub:} \url{https://github.com/yourusername}'))  # Update URL
 
-# Education
-doc.append(Section('Education'))
-doc.append('Degree Name in Major\n')
-doc.append('University Name, Location\n')
-doc.append('Graduation Date\n')
+    # Experience
+    with doc.create(Section()):
+        doc.append(NoEscape(r'\sectionheader{Experience}'))
+        with doc.create(Subsection('Job Title 1')):
+            doc.append('Company Name, Location\n')
+            doc.append('Dates of Employment\n')
+            doc.append('Responsibilities and achievements.\n')
 
-# Generate PDF
-doc.generate_pdf('resume', clean_tex=False)
+        with doc.create(Subsection('Job Title 2')):
+            doc.append('Company Name, Location\n')
+            doc.append('Dates of Employment\n')
+            doc.append('Responsibilities and achievements.\n')
 
-# Clean up auxiliary files
-doc.generate_tex(clean_tex=True)
+    # Tools
+    with doc.create(Section()):
+        doc.append(NoEscape(r'\sectionheader{Tools}'))
+        doc.append('List of tools and technologies relevant to data analysis.\n')
+
+    # Education
+    with doc.create(Section()):
+        doc.append(NoEscape(r'\sectionheader{Education}'))
+        doc.append('Degree Name in Major\n')
+        doc.append('University Name, Location\n')
+        doc.append('Graduation Date\n')
+
+    # Generate PDF
+    doc.generate_pdf('resume', clean_tex=False)
+
+    # Clean up auxiliary files
+    doc.generate_tex(clean_tex=True)
+
+if __name__ == '__main__':
+    generate_resume()
