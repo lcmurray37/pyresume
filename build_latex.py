@@ -1,67 +1,59 @@
-from pylatex import Document, Section, Subsection, Command
-from pylatex.utils import bold, NoEscape
+from pylatex import Document, Section, Subsection, Command, NoEscape
+from pylatex.utils import bold
 
-def generate_resume():
-    # Create a new Document
-    doc = Document()
+# Define custom colors
+section_color = 'gray!30'  # Define your preferred color, e.g., gray with 30% intensity
 
-    # Document metadata
-    doc.preamble.append(Command('title', 'Resume'))
-    doc.preamble.append(Command('author', 'Your Name'))
-    doc.preamble.append(Command('date', ''))
+# Create a document
+doc = Document()
 
-    # Define a custom command for section headers
-    doc.preamble.append(NoEscape(r'''
-        \newcommand{\sectionheader}[1]{
-            \par\bigskip
-            {\Large\bfseries #1}
-            \par\smallskip
-            \hrule
-            \par\medskip
-        }
-    '''))
+# Define a custom command for section headers with background color
+doc.preamble.append(Command('usepackage', 'xcolor'))
+doc.preamble.append(Command('definecolor', 'sectioncolor', section_color))
+doc.preamble.append(NoEscape(r'''
+    \usepackage{titlesec}
+    \titleformat{\section}
+      {\normalfont\Large\bfseries}
+      {\colorbox{sectioncolor}{\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{\textcolor{white}{\thesection}}}}
+      {0em}
+      {\color{sectioncolor}\MakeUppercase}
+    \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+    
+    \titleformat{\subsection}
+      {\normalfont\large\bfseries}
+      {\thesubsection}
+      {1em}
+      {}
+    \titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
+'''))
 
-    # Title (Name)
-    doc.append(Section(bold('Your Name')))
+# Remove section numbering
+doc.preamble.append(NoEscape(r'\renewcommand{\thesection}{}'))
 
-    # Contact Information
-    doc.append(Section('Contact Information'))
-    doc.append(NoEscape(r'\textbf{Phone:} Your Phone Number'))
-    doc.append(NoEscape(r'\newline'))
-    doc.append(NoEscape(r'\textbf{Email:} Your Email Address'))
-    doc.append(NoEscape(r'\newline'))
-    doc.append(NoEscape(r'\textbf{GitHub:} \url{https://github.com/yourusername}'))  # Update URL
+# Title with name
+doc.preamble.append(Command('title', 'Lucy Murray'))
+doc.append(NoEscape(r'\maketitle'))
 
-    # Experience
-    with doc.create(Section()):
-        doc.append(NoEscape(r'\sectionheader{Experience}'))
-        with doc.create(Subsection('Job Title 1')):
-            doc.append('Company Name, Location\n')
-            doc.append('Dates of Employment\n')
-            doc.append('Responsibilities and achievements.\n')
+# Contact information section
+with doc.create(Section('Contact Information')):
+    doc.append(bold('Phone Number: '))
+    doc.append('+1 (123) 456-7890\n')
+    doc.append(bold('Email: '))
+    doc.append('lucy.murray@example.com\n')
+    doc.append(bold('GitHub: '))
+    doc.append('github.com/lucymurray')
 
-        with doc.create(Subsection('Job Title 2')):
-            doc.append('Company Name, Location\n')
-            doc.append('Dates of Employment\n')
-            doc.append('Responsibilities and achievements.\n')
+# Sections with custom formatting
+with doc.create(Section('Experience')):
+    with doc.create(Subsection('2023 - Present')):
+        doc.append(bold('Software Engineer at XYZ Inc.'))
 
-    # Tools
-    with doc.create(Section()):
-        doc.append(NoEscape(r'\sectionheader{Tools}'))
-        doc.append('List of tools and technologies relevant to data analysis.\n')
+with doc.create(Section('Tools')):
+    doc.append('Python, LaTeX, Git, VS Code')
 
-    # Education
-    with doc.create(Section()):
-        doc.append(NoEscape(r'\sectionheader{Education}'))
-        doc.append('Degree Name in Major\n')
-        doc.append('University Name, Location\n')
-        doc.append('Graduation Date\n')
+with doc.create(Section('Education')):
+    with doc.create(Subsection('2019 - 2023')):
+        doc.append(bold('Bachelor of Science in Computer Science'))
 
-    # Generate PDF
-    doc.generate_pdf('resume', clean_tex=False)
-
-    # Clean up auxiliary files
-    doc.generate_tex(clean_tex=True)
-
-if __name__ == '__main__':
-    generate_resume()
+# Generate the PDF
+doc.generate_pdf('resume_customized_final', clean_tex=False)
