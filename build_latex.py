@@ -6,11 +6,11 @@ doc = Document()
 
 # Document metadata
 doc.preamble.append(Command('title', 'Resume'))
-doc.preamble.append(Command('author', 'Your Name'))
+doc.preamble.append(Command('author', 'Lucy Murray'))
 doc.preamble.append(Command('date', ''))
 
 # Title (Name)
-doc.append(Section(bold('Your Name')))
+doc.append(Section('Lucy Murray'))
 doc.append(Section('Contact Information'))
 doc.append('Address: Your Address\n')
 doc.append('Phone: Your Phone Number\n')
