@@ -4,60 +4,90 @@
 \usepackage{lmodern}%
 \usepackage{textcomp}%
 \usepackage{lastpage}%
+\usepackage[margin=0.7in]{geometry}%
+\usepackage{parskip}%
+\usepackage{setspace}%
+\usepackage{enumitem}%
+\setstretch{0.88}%
 %
-\usepackage{xcolor}%
-\definecolor[gray!30]{sectioncolor}%
-
-    \usepackage{titlesec}
-    \titleformat{\section}
-      {\normalfont\Large\bfseries}
-      {\colorbox{sectioncolor}{\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{\textcolor{white}{\thesection}}}}
-      {0em}
-      {\color{sectioncolor}\MakeUppercase}
-    \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
-    
-    \titleformat{\subsection}
-      {\normalfont\large\bfseries}
-      {\thesubsection}
-      {1em}
-      {}
-    \titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
-%
-\renewcommand{\thesection}{}%
-\title{Lucy Murray}%
+\setcounter{secnumdepth}{0}%
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=*}%
+\title{Lucy C. Murray}%
+\date{}%
 %
 \begin{document}%
 \normalsize%
 \maketitle%
 \section{Contact Information}%
 \label{sec:ContactInformation}%
-\textbf{Phone Number: }%
-+1 (123) 456{-}7890\newline%
+\textbf{Email: } lcmurray37@gmail.com\\%
+\textbf{Phone: } (202) 934-3066\\%
+\textbf{GitHub: } github.com/lcmurray37\\
+
 %
-\textbf{Email: }%
-lucy.murray@example.com\newline%
-%
-\textbf{GitHub: }%
-github.com/lucymurray
+\section{Professional Summary}%
+\label{sec:ProfessionalSummary}%
+\begin{itemize}%
+\item Versatile Data Science and Information Management professional with 7+ years of experience leading enterprise analytics, data engineering, and database modernization.%
+\item Led cross-functional teams of 14+ members delivering scalable data pipelines and cloud analytics tools.%
+\item Bridges technical execution with executive strategy to drive data-informed decision making.%
+\end{itemize}
 
 %
 \section{Experience}%
 \label{sec:Experience}%
-\subsection{2023 {-} Present}%
-\label{subsec:2023{-}Present}%
-\textbf{Software Engineer at XYZ Inc.}
+\subsection{TECHNOMICS, INC. | Senior Analyst | Aug 2021 – Present}%
+\label{subsec:TECHNOMICS,INC.|SeniorAnalyst|Aug2021Present}%
+\textbf{Project Management & Leadership:}\\%
+\begin{itemize}%
+\item Led enterprise data science and analytics initiatives for federal, defense, and international clients.%
+\item Managed Agile/Kanban teams of up to 14+ members.%
+\item Directed sprint planning, code reviews, and technical mentorship.%
+\end{itemize}%
+\textbf{Data Science & Engineering:}\\%
+\begin{itemize}%
+\item Migrated legacy MS Access systems to DuckDB and R-based pipelines.%
+\item Optimized SQL/R queries and validated data pipelines for modeling accuracy.%
+\item Built prioritization models using Python and Palantir Foundry.%
+\item Automated Excel-heavy reporting workflows using R and Python.%
+\item Implemented Git/GitLab version-controlled data extraction workflows.%
+\item Developed BI dashboards tracking cost growth and engineering change trends.%
+\end{itemize}%
+\textbf{Training & Organizational Impact:}\\%
+\begin{itemize}%
+\item Led Data & Analytics certification program for ~1,200 personnel.%
+\item Developed training modules in statistical sampling and enterprise data systems.%
+\end{itemize}
 
 %
-\section{Tools}%
-\label{sec:Tools}%
-Python, LaTeX, Git, VS Code
+\subsection{KCIC, LLC | Senior Data Analyst | Mar 2019 – Aug 2021}%
+\label{subsec:KCIC,LLC|SeniorDataAnalyst|Mar2019Aug2021}%
+\textbf{Database Engineering & Analytics:}\\%
+\begin{itemize}%
+\item Built optimized SQL views, stored procedures, and indexes improving query performance.%
+\item Developed SQL + Excel reporting pipelines for large claims datasets.%
+\item Designed validation systems ensuring data integrity under strict deadlines.%
+\end{itemize}%
+\textbf{Process Improvement & Training:}\\%
+\begin{itemize}%
+\item Standardized analytics training programs across analyst teams.%
+\end{itemize}
 
 %
 \section{Education}%
 \label{sec:Education}%
-\subsection{2019 {-} 2023}%
-\label{subsec:2019{-}2023}%
-\textbf{Bachelor of Science in Computer Science}
+\begin{itemize}%
+\item Professional Certificate in Data Science — Montgomery College (2019–2020)%
+\item B.A. Economics, Government & Politics — University of Maryland (2013–2017)%
+\end{itemize}
+
+%
+\section{Core Competencies}%
+\label{sec:CoreCompetencies}%
+\textbf{Leadership: } Agile, Kanban, Project Management, Stakeholder Engagement\\%
+\textbf{Data Science: } Python, R, Statistical Modeling, Visualization\\%
+\textbf{Data Engineering: } SQL, ETL/ELT, DuckDB, MongoDB\\%
+\textbf{Tools: } Power BI, Git, Excel, Palantir Foundry\\
 
 %
 \end{document}
