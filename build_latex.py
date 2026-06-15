@@ -1,5 +1,6 @@
 from pylatex import Document, Section, Subsection, Command, NoEscape
 from resume_data import resume
+from pathlib import Path
 
 # -----------------------
 # Document setup
@@ -110,4 +111,9 @@ with doc.create(Section("Core Competencies")):
 # -----------------------
 # Build PDF
 # -----------------------
-doc.generate_pdf("resume_customized_final", clean_tex=True)
+build_dir = Path("build")
+build_dir.mkdir(exist_ok=True)
+doc.generate_pdf(
+    filepath=str(build_dir / "resume_customized_final"),
+    clean_tex=True
+)
