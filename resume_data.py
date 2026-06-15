@@ -16,9 +16,9 @@ resume = {
         {
             "company": "TECHNOMICS, INC.",
             "title": "Senior Data Analyst",
-            "dates": "Aug 2021 – Present",
+            "dates": "Aug 2021 -- Present",
             "sections": {
-                "Project Management & Leadership": [
+                "Project Management and Leadership": [
                     "Led data management, data science, and analytics projects to maximize enterprise-level data solutions for federal, defense, and international clients.",
                     "Managed cross-functional development teams ranging with up to 14+ members leveraging Agile and Kanban frameworks.",
                     "Directed workloads, established sprint agendas, conducted code reviews, and provided technical mentorship to expand team capabilities."
@@ -32,8 +32,8 @@ resume = {
                     "Engineered interactive, high-visibility BI tools to analyze cost growth and engineering change proposals trends, translating granular technical data into actionable risk metrics for executive stakeholders."
                 ],
                 "Enterprise-Scale Training Delivery": [
-                    "Supported development and delivery of organization-wide Data & Analytics Certification program.",
-                    "Upgraded data literacy by developing training for ~1,200 personnel (15% of total enterprise staff) across modules in data-driven decision-making, statistical sampling, data science and enterprise management system tools."
+                    "Supported development and delivery of organization-wide Data and Analytics Certification program.",
+                    "Upgraded data literacy by developing training for approximately 1,200 personnel (15% of total enterprise staff) across modules in data-driven decision-making, statistical sampling, data science and enterprise management system tools."
                 ]
             }
         },
@@ -41,9 +41,9 @@ resume = {
         {
             "company": "KCIC, LLC",
             "title": "Senior Data Analyst",
-            "dates": "Mar 2019 – Aug 2021",
+            "dates": "Mar 2019 -- Aug 2021",
             "sections": {
-                "Database Engineering, Analytics & Reporting, Data Quality Control": [
+                "Database Engineering, Analytics and Reporting, Data Quality Control": [
                     "Provided database and information management solutions, supporting corporate claims administration and analysis.",
                     "Authored and tuned complex MS SQL views, stored procedures, and indexes, significantly improving data retrieval speeds and front-end usability.",
                     "Developed SQL queries and MS Excel pivot tables to analyze massive tranches of claims data, generating analysis for key industry reports.",
@@ -55,8 +55,8 @@ resume = {
     ],
 
     "education": [
-        "Professional Certificate in Data Science — Montgomery College (2019–2020)",
-        "B.A. Economics, Government & Politics — University of Maryland (2013–2017)"
+        "Professional Certificate in Data Science -- Montgomery College (2019--2020)",
+        "B.A. Economics, Government and Politics -- University of Maryland (2013--2017)"
     ],
 
     "skills": {
