@@ -1,0 +1,59 @@
+{
+  "name": "LUCY C. MURRAY",
+  "contact": {
+    "email": "Icmurray37@gmail.com",
+    "phone": "(202) 934-3066",
+    "github": "github.com/lcmurray37"
+  },
+  "summary": [
+    "Senior Data Science and Analytics leader with 7+ years of experience spearheading advanced machine learning models, statistical analysis, and enterprise data engineering pipelines across complex sectors.",
+    "Proven track record designing robust predictive algorithms and migrating legacy architectures to modern, scalable production frameworks using Python, SQL, and cloud-integrated data environments.",
+    "Expert at translating intricate technical patterns and AI data solutions into high-visibility visualizations and actionable strategic insights for cross-functional business stakeholders and non-technical leadership.",
+    "Accomplished technical mentor who has scaled organizational data literacy and guided engineering teams through rigorous code reviews, MLOps best practices, and Agile delivery."
+  ],
+  "experience": [
+    {
+      "company": "TECHNOMICS, INC.",
+      "title": "Senior Analyst",
+      "dates": "August 2021 – Present",
+      "sections": {
+        "Project Management & Leadership": [
+          "Lead advanced data science, predictive modeling, and analytics initiatives to develop scalable algorithms and machine learning solutions for federal, defense, and international enterprise environments.",
+          "Manage cross-functional engineering teams of up to 14+ members under Agile/Kanban frameworks, directing sprint agendas, conducting technical code reviews, and mentoring junior analysts in Python and statistical techniques."
+        ],
+        "Database Management & Advanced Analytics": [
+          "Designed and deployed a machine learning prioritization model within production environments leveraging Python, SQL, and Palantir Foundry pipelines, reducing process subjectivity and optimizing cloud resource allocation.",
+          "Championed enterprise database migrations from legacy structures to modern, high-performance architectures using DuckDB, ensuring strict data governance, clean schema transformations, and rigorous feature engineering.",
+          "Replaced manual, spreadsheet-heavy workflows with automated, highly optimized programmatic pipelines to discover meaningful patterns, trends, and statistical relationships in massive data tranches.",
+          "Engineered interactive, high-visibility business intelligence tools and data visualizations, translating complex risk metrics and algorithmic outcomes into clear recommendations for executive stakeholders."
+        ]
+      }
+    },
+    {
+      "company": "KCIC, LLC",
+      "title": "Senior Data Analyst",
+      "dates": "March 2019 – August 2021",
+      "sections": {
+        "Database Engineering & Quality Control": [
+          "Automated data workflows and predictive solutions, developing advanced SQL views, stored procedures, and indexes to optimize data retrieval speeds and front-end infrastructure performance.",
+          "Leveraged Python and SQL to clean, transform, and analyze massive relational datasets, identifying key operational trends and generating foundational industry analytics reports.",
+          "Designed and implemented automated data validation routines and causal analysis to audit legacy records under strict 48-hour data ingestion and production deployment deadlines."
+        ],
+        "Project Management & Professional Training": [
+          "Designed and executed firm-wide data analysis training programs that standardized database architecture ingestion, reporting protocols, and analytics adoption across multiple cross-functional teams."
+        ]
+      }
+    }
+  ],
+  "education": [
+    "Professional Certificate in Data Science, Montgomery College | 2019 – 2020",
+    "B.A., Economics, Government & Politics, University of Maryland, College Park | 2013 – 2017"
+  ],
+  "skills": {
+    "Leadership": "Agile Methodologies (Kanban), Project Management, Cross-functional Team Leadership, Mentorship & Code Reviews",
+    "Data Science & Analytics": "Predictive Prioritization Modeling, Factor Analysis, Statistical Sampling, Data Visualization, MLOps",
+    "Technical Toolkit": "Python, R (Shiny, ggplot2), SQL (MS SQL, DuckDB), Palantir Foundry, Power BI, Git/GitLab"
+  }
+}
+
+
