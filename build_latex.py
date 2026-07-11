@@ -110,4 +110,4 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--output", default="resume_customized_final", help="Output PDF filename (without extension).")
     
     args = parser.parse_args()
-    build_pdf(args.input, args.output)docs
+    build_pdf(args.input, args.output)
